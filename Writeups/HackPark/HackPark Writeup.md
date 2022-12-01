@@ -4,6 +4,7 @@
 **TASK 1**
 
 Deploy the machine and access its web server.
+Please note that this machine does not respond to ping (ICMP)
 
   
 Q: Whats the name of the clown displayed on the homepage?
