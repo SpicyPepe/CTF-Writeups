@@ -9,5 +9,5 @@
   * [HackPark][3]
 
 [1]: https://www.linkedin.com/in/christian-motu
-[2]: /TryHackMe/
-[3]: /TryHackMe/room/hackpark
+[2]: https://tryhackme.com/
+[3]: https://tryhackme.com/room/hackpark
