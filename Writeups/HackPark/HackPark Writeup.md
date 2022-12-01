@@ -161,7 +161,7 @@ A: `WindowsScheduler`
 
 Q: What is the name of the binary you're supposed to exploit?
 
-Checking the events directory for the WindowsScheduler service for what what ever is being run.
+Checking the events directory for the WindowsScheduler service for what ever is being run.
 
 ![Pasted image 20221201150823.png](https://github.com/SpicyPepe/CTF-Writeups/blob/main/Writeups/Assets/Images/Pasted%20image%2020221201150823.png)
 
