@@ -9,7 +9,7 @@ Deploy the machine and access its web server.
 Q: Whats the name of the clown displayed on the homepage?
 
 Navigated to the IP address: 10.10.44.152
-![Pasted image 20221201113634.png](https://github.com/SpicyPepe/CTF-Writeups/blob/main/Writeups/Assets/Images/Pasted%20image%2020221201113634.png)
+![Pasted image 20221201113634.png](/../Assets/Images)
 A: `Pennywise`
 
 **Recon**
