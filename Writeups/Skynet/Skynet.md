@@ -106,7 +106,7 @@ Nothing much to be found...
 ## Question 3:
 #### What is the vulnerability called when you can include a remote file for malicious purposes?
 
-##### Answer: Remote File Inclusion
+##### Answer: `Remote File Inclusion`
 
 ## Question 4:
 ####   What is the user flag?
@@ -148,7 +148,7 @@ Great! We've now got access to the machine. Lets find out what the user flag is 
 
 ![](Assets/Images/Pasted%20image%2020221205143650.png)
 
-##### Answer: 7ce5c2109a40f958099283600a9ae807
+##### Answer: `7ce5c2109a40f958099283600a9ae807`
 
 ## Question 5: 
 #### What is the root flag?
@@ -198,7 +198,7 @@ We can now easily get the root flag and answer our final question!
 
 ![](Assets/Images/Pasted%20image%2020221205162135.png)
 
-##### Answer: 3f0372db24753accc7179a282cd6a949
+##### Answer: `3f0372db24753accc7179a282cd6a949`
 
 ## Conclusion
 
