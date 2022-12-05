@@ -56,7 +56,9 @@ Accessing Anonymous doesn't require any passwords so it was easy to download the
 ![](Assets/Images/Pasted%20image%2020221202151430.png)
 
 **Log1.txt**
+
 ![](Assets/Images/Pasted%20image%2020221202151531.png)
+
 Logs 2 & 3 contained no info.
 
 Looks like log1 has a list of passwords we can use to brute force our way into Miles Squirrelmail account.
