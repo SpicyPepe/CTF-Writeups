@@ -15,7 +15,8 @@ Started off by pinging the machine to see if it responds to ICMP pings
 
 ![](Assets/Images/Pasted%20image%2020221202125805.png)
 
-Web home page: 
+Web home page:
+
 ![](Assets/Images/Pasted%20image%2020221202132616.png)
 
 Nothing interesting in source code. Search bar does nothing.
