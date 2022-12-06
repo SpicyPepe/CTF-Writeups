@@ -11,7 +11,13 @@ Q: Whats the name of the clown displayed on the homepage?
 Navigated to the IP address: 10.10.44.152
 ![](Assets/Images/Pasted%20image%2020221201113634.png)
 A: `Pennywise`
-
+<a>
+  <img src="http://placehold.it/230x300">
+  <!-- the hover effect --> 
+  <div class="shown-when-hover">
+      This is visible when hovering over it.
+    </div>
+  </a>
 
 **Recon**
 
