@@ -1,7 +1,9 @@
 #Linux #SQL #PHP
 
 
+
 ![](THM/Writeups/Daily%20Bugle/Assets/Images/Daily_Bugle.png)
+
 
 ![](THM/Writeups/Daily%20Bugle/Assets/Images/fREnB0x.png)
 
