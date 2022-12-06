@@ -10,7 +10,10 @@ Q: Whats the name of the clown displayed on the homepage?
 
 Navigated to the IP address: 10.10.44.152
 ![](Assets/Images/Pasted%20image%2020221201113634.png)
-A: `Pennywise`
+A: 
+<div class="myDIV">Hover over me.</div>  
+<div class="hide">`Pennywise`</div>
+
 
 **Recon**
 
