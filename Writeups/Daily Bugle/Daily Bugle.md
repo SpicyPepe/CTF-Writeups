@@ -135,7 +135,7 @@ Interestingly enough it is in fact their password and I was able to successfully
 
 ![](Assets/Images/Pasted%20image%2020221206163543.png)
 
-Our first flag is located in `jjameson`'s home directory ``/home/jjameson/user.txt`
+Our first flag is located in `jjameson`'s home directory `/home/jjameson/user.txt`
 
 ##### Answer: `27a260fe3cba712cfdedb1c86d80442e`
 
