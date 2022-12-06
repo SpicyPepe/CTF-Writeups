@@ -10,7 +10,6 @@ Q: Whats the name of the clown displayed on the homepage?
 Navigated to the IP address: 10.10.44.152
 ![](Assets/Images/Pasted%20image%2020221201113634.png)
 A: `Pennywise`
-This is a [hover text](## "your hover text") example.
 
 **Recon**
 
