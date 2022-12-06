@@ -176,7 +176,7 @@ EOF
 sudo yum -c $TF/x --enableplugin=y
 ```
 
-Once you've created the above custom plugin and run `sudo tum-c $TF/x --enebleplugin=y` we now have out root shell and can capture our final flag!
+Once you've created the above custom plugin and run `sudo tum-c $TF/x --enebleplugin=y` we now have our root shell and can capture our final flag!
 
 ##### Answer: eec3d53292b1821868266858d7fa6f79
 
