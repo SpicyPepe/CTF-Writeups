@@ -8,8 +8,10 @@
 * [TryHackMe][2]
   * [HackPark][3]
   * [Skynet][4]
+  * [Daily Bugle][5]
 
 [1]: https://www.linkedin.com/in/christian-motu
 [2]: https://tryhackme.com/
 [3]: https://tryhackme.com/room/hackpark
 [4]: https://tryhackme.com/room/skynet
+[5]: https://tryhackme.com/room/dailybugle
