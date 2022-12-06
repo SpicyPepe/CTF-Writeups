@@ -3,8 +3,6 @@
 **TASK 1**
 
 Deploy the machine and access its web server.
-<a href="#" class="button.unlock">Search</a>
-<a href="#" class="button pill">This is a pill button</a>
   
 Q: Whats the name of the clown displayed on the homepage?
 
@@ -12,7 +10,6 @@ Navigated to the IP address: 10.10.44.152
 ![](Assets/Images/Pasted%20image%2020221201113634.png)
 A: `Pennywise`
 
-[hover text](#magic-button "your hover text")
 
 **Recon**
 
