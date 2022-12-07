@@ -9,7 +9,7 @@
 
 ![](THM/Writeups/Daily%20Bugle/Assets/Images/fREnB0x.png)
 
-Hack into the machine and obtain the root user's credentials.
+# Hack into the machine and obtain the root user's credentials.
 
 ## Reconnaissance 
 
