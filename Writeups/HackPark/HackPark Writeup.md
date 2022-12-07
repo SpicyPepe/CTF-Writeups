@@ -49,7 +49,7 @@ Intercepted login with Burpsuite
 
 ![](Assets/Images/Pasted%20image%2020221201114321.png)
 
-![](Assets/Images/Pasted image 20221201115259.png)
+![](Assets/Images/Pasted%20image%2020221201115259.png)
 
 ##### Answer: <details> <summary>Show Answer</summary> `POST` </details>
 
