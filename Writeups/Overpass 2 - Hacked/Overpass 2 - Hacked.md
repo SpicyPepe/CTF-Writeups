@@ -14,7 +14,7 @@ md5sum of PCAP file: 11c3b2e9221865580295bc662c35c6dc
 
 ## Question 1:
 #### What was the URL of the page they used to upload a reverse shell?
-Opening the task file in Wireshark we can see on the 14th line a post request to `/development/`
+Opening the task file in Wireshark we can see on the 14th line a post request to `/development/upload.php`
 
 ![](Assets/Images/Pasted%20image%2020221207110324.png)
 
