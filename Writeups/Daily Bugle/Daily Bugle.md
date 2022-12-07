@@ -41,7 +41,7 @@ When clicking on the forgot password link a new page is opened up to enter the a
 ## Question 1:
 #### Who robbed the bank?
 
-##### Answer: `Spiderman`
+##### Answer: <details> <summary>Show Answer</summary> `Spiderman` </details>
 
 ## Question 2: 
 #### What is the Joomla version?
@@ -58,7 +58,7 @@ We effectively need to navigate to `_/administrator/manifests/files/joomla.xml_`
 
 ![](Assets/Images/Pasted%20image%2020221206115650.png)
 
-##### Answer: `3.7.0`
+##### Answer: <details> <summary>Show Answer</summary> `3.7.0` </details>
 
 ## Question 3:
 #### *Instead of using SQLMap, why not use a python script!*  
@@ -94,7 +94,7 @@ We can now attempt to crack this users password using John the Ripper and a word
 
 After waiting 7 minutes for John to do his thing, we've managed to crack Jonah's password!
 
-##### Answer: `spiderman123`
+##### Answer: <details> <summary>Show Answer</summary> `spiderman123` </details>
 
 Using these new found credentials we're now able to login to the Joomla admin portal.
 
@@ -137,7 +137,7 @@ Interestingly enough it is in fact their password and I was able to successfully
 
 Our first flag is located in `jjameson`'s home directory `/home/jjameson/user.txt`
 
-##### Answer: `27a260fe3cba712cfdedb1c86d80442e`
+##### Answer: <details> <summary>Show Answer</summary> `27a260fe3cba712cfdedb1c86d80442e` </details>
 
 ## Privilege Escalation
 
@@ -178,6 +178,6 @@ sudo yum -c $TF/x --enableplugin=y
 
 Once you've created the above custom plugin and run `sudo tum-c $TF/x --enebleplugin=y` we now have our root shell and can capture our final flag!
 
-##### Answer: `eec3d53292b1821868266858d7fa6f79`
+##### Answer: <details> <summary>Show Answer</summary> `eec3d53292b1821868266858d7fa6f79` </details>
 
 Big thank you for reading through my writeup of the Daily Bugle room on TryHackMe.com. I really hope you've found the information here useful!
