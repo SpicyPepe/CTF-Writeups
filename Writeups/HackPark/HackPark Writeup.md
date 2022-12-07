@@ -4,11 +4,11 @@
 
 Deploy the machine and access its web server.
   
-Q: Whats the name of the clown displayed on the homepage?
+## Question 1: Whats the name of the clown displayed on the homepage?
 
 Navigated to the IP address: 10.10.44.152
 ![](Assets/Images/Pasted%20image%2020221201113634.png)
-A: `Pennywise`
+##### Answer: <details> <summary>Show Answer</summary> `Pennywise` </details>
 
 
 **Recon**
