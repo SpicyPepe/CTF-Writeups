@@ -178,6 +178,6 @@ sudo yum -c $TF/x --enableplugin=y
 
 Once you've created the above custom plugin and run `sudo tum-c $TF/x --enebleplugin=y` we now have our root shell and can capture our final flag!
 
-##### Answer: eec3d53292b1821868266858d7fa6f79
+##### Answer: `eec3d53292b1821868266858d7fa6f79`
 
 Big thank you for reading through my writeup of the Daily Bugle room on TryHackMe.com. I really hope you've found the information here useful!
