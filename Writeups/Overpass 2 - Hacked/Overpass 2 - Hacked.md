@@ -14,15 +14,9 @@ md5sum of PCAP file: 11c3b2e9221865580295bc662c35c6dc
 ![Download Task File](Assets/Task_Files/overpass2.pcapng "Download Task File")
 
 <!DOCTYPE html>
-<head>
-<head>
-    <title>
-         “spoiler” text in github wiki pages
-    </title>
-</head>
 <body>
     <details>
-        <summary>GeeksforGeeks</summary>
+        <summary>Show Answer</summary>
          A Computer Science Portal for Geeks
     </details>        
 </body>
