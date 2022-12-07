@@ -1,10 +1,12 @@
-#Writeups #Linux
-
 ![](https://i.imgur.com/SNHDHoh.png)
 
 _Hasta la vista, baby._  
 
 Are you able to compromise this Terminator themed machine?
+
+# Disclaimer!
+### All writeups posted in this repository contain answers to questions hidden behind spoiler tags.
+##### To ensure the best learning experience, I highly recommend avoiding the answers. You do however still have the option to view them if you think it will of benefit in the long run i.e reverse engineering a solution from the answer to gain a better understanding etc...
 
 ## Question 1:   
 #### What is Miles password for his emails?
