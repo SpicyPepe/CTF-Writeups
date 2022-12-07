@@ -42,19 +42,19 @@ Attempted admin:admin however this failed.
 
 **TASK 2**
 
-Q: What request type is the Windows website login form using?
+## Question 1: What request type is the Windows website login form using?
 
 Intercepted login with Burpsuite
 ![](Assets/Images/Pasted%20image%2020221201114321.png)
 ![[Assets/Images/Pasted image 20221201115259.png]]
 
-A: POST
+##### Answer: <details> <summary>Show Answer</summary> `POST` </details>
 
 "Now we know the request type and have a URL for the login form, we can get started brute-forcing an account. Run the following command but fill in the blanks:""
 
 hydra -l (username) -P /usr/share/wordlists/(wordlist) (ip) http-post-form
 
-Q: Guess a username, choose a password wordlist and gain credentials to a user account!
+## Question 2: Guess a username, choose a password wordlist and gain credentials to a user account!
 
 Pulled URL and cookie from Burp "/Account/login.aspx:"
 
@@ -67,30 +67,30 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.44.152 http-post-form "
 
 ![](Assets/Images/Pasted%20image%2020221201122947.png)
 
-A: `1qaz2wsx`
+##### Answer: <details> <summary>Show Answer</summary> `1qaz2wsx` </details>
 
 **TASK 3**
 
-Q:  Now you have logged into the website, are you able to identify the version of the BlogEngine?
+## Question 1:  Now you have logged into the website, are you able to identify the version of the BlogEngine?
 
 Inspecting the source code we can easily find the version of BlogEngine being run:
 ![](Assets/Images/Pasted%20image%2020221201123720.png)
 
-A: `3.3.6.0`
+##### Answer: <details> <summary>Show Answer</summary> `3.3.6.0` </details>
 
   
 Use the [exploit database archive](http://www.exploit-db.com/) to find an exploit to gain a reverse shell on this system.
 
-What is the CVE?
+## Question 2: What is the CVE?
 
 ![](Assets/Images/Pasted%20image%2020221201124723.png)
 
-A: `CVE-2019-6714`
+##### Answer: <details> <summary>Show Answer</summary> `CVE-2019-6714` </details>
 
   
 Using the public exploit, gain initial access to the server.
 
-Q: Who is the webserver running as?
+## Question 3: Who is the webserver running as?
 
 As per the details listed on CVE-2019-6714
 
@@ -109,7 +109,7 @@ Navigate to: http://10.10.44.152/?theme=../../App_Data/files which activated the
 
 ![](Assets/Images/Pasted%20image%2020221201130611.png)
 
-A: `iis apppool\blog`
+##### Answer: <details> <summary>Show Answer</summary> `iis apppool\blog` </details>
 
 Our netcat session is a little unstable, so lets generate another reverse shell using msfvenom.
 
@@ -136,15 +136,15 @@ Ran 'Exploit -j' to run the job in the background. Moved over to the netcat shel
   
 You can run metasploit commands such as sysinfo to get detailed information about the Windows system. Then feed this information into the [windows-exploit-suggester](https://github.com/GDSSecurity/Windows-Exploit-Suggester) script and quickly identify any obvious vulnerabilities.
 
-Q: What is the OS version of this windows machine?
+## Question 4: What is the OS version of this windows machine?
 
 We can see by running the meterpreter command `sysinfo` we get certain information.
 
 ![](Assets/Images/Pasted%20image%2020221201140046.png)
 
-A: `Windows 2012 R2 (6.3 Build 9600)`
+##### Answer: <details> <summary>Show Answer</summary> `Windows 2012 R2 (6.3 Build 9600)` </details>
 
-Q: Further enumerate the machine.
+## Question 5: Further enumerate the machine.
 What is the name of the abnormal _service_ running?
 
 running `ps` to see what processes are running.
@@ -154,9 +154,9 @@ Enumerated the machine further by running WinPEAS. Copied over WinPEAS using the
 
 ![](Assets/Images/Pasted%20image%2020221201145831.png)
 
-A: `WindowsScheduler`
+##### Answer: <details> <summary>Show Answer</summary> `WindowsScheduler` </details>
 
-Q: What is the name of the binary you're supposed to exploit?
+## Question 6: What is the name of the binary you're supposed to exploit?
 
 Checking the events directory for the WindowsScheduler service for what what ever is being run.
 
@@ -166,12 +166,12 @@ Checking the INI_LOG.txt file there looks to be an (administrator) process which
 
 ![](Assets/Images/Pasted%20image%2020221201150900.png)
 
-A: `Message.exe`
+##### Answer: <details> <summary>Show Answer</summary> `Message.exe` </details>
 
   
 Using this abnormal service, escalate your privileges!
 
-Q: What is the user flag (on Jeffs Desktop)?
+## Question 7: What is the user flag (on Jeffs Desktop)?
 
 Moving back to the WindowsScheduler directory (where the Message.exe file is located), copied accross the same shell used earlier and re-named it "Message.exe" while also changing the original Message.exe file to "Message.bak".
 
@@ -187,22 +187,26 @@ Located the flag on Jeff's Desktop and viewed its contents to find the next answ
 
 ![](Assets/Images/Pasted%20image%2020221201153912.png)
 
-A: `759bd8af507517bcfaede78a21a73e39`
+##### Answer: <details> <summary>Show Answer</summary> `759bd8af507517bcfaede78a21a73e39` </details>
 
-Q: What is the root flag?
+## Question 8: What is the root flag?
 
 Repeated the above process except in the Administrator directory.
 
 ![](Assets/Images/Pasted%20image%2020221201154107.png)
 
-A: `7e13d97f05f7ceb9881a3eb3d78d3e72`
+##### Answer: <details> <summary>Show Answer</summary> `7e13d97f05f7ceb9881a3eb3d78d3e72` </details>
 
 **TASK 5**
 
-Q: Using winPeas, what was the Original Install time? (This is date and time)
+## Question 1: Using winPeas, what was the Original Install time? (This is date and time)
 
 Already ran winPeas from earlier
 
 ![](Assets/Images/Pasted%20image%2020221201155216.png)
 
-A: `8/3/2019, 10:43:23 AM`
+##### Answer: <details> <summary>Show Answer</summary> `8/3/2019, 10:43:23 AM` </details>
+
+## Conclusion
+
+Thank you for reading through my write up. This is the first of many writeups I will be doing for TryHackMe rooms and I hope you found the information here helpful!
