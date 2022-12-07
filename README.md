@@ -1,7 +1,7 @@
 #### LinkedIn: [linkedin.com/in/christian-motu][1]
 
 # Disclaimer!
-### All writeups posted in this repository contain answers to questions hidden behind a spoiler tag.
+### All writeups posted in this repository contain answers to questions hidden behind spoiler tags.
 ##### To ensure the best learning experience, I highly recommend avoiding revealing the answers however you do have the option to view them if you think it will benefit you in the long run i.e reverse engineering a solution from the answer to gain a better understanding etc...
 
 ## CTF Write Ups
