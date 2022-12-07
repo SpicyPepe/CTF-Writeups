@@ -76,7 +76,7 @@ Already we can see the first password on the list received a redirect (302) howe
 
 We now know the answer to the first question!
 
-##### Answer: `cyborg007haloterminator`
+##### Answer: <details> <summary>Show Answer</summary> `cyborg007haloterminator` </details>
 
 ## Question 2:
 ####   What is the hidden directory?
@@ -96,7 +96,7 @@ Ok we found a bunch of .pdf files and a ‘notes’ directory. Inside there is a
 ![](Assets/Images/Pasted%20image%2020221205131525.png)
 
 Interesting! We have some sort of directory in the file (/45kra24zxs28v3yd) which is also the answer to question 2!
-##### Answer: /45kra24zxs28v3yd
+##### Answer: <details> <summary>Show Answer</summary> `/45kra24zxs28v3yd` </details>
 
 Let’s try to access that on the main web page:
 
@@ -109,7 +109,7 @@ Nothing much to be found...
 ## Question 3:
 #### What is the vulnerability called when you can include a remote file for malicious purposes?
 
-##### Answer: `Remote File Inclusion`
+##### Answer: <details> <summary>Show Answer</summary> `Remote File Inclusion` </details>
 
 ## Question 4:
 ####   What is the user flag?
@@ -151,7 +151,7 @@ Great! We've now got access to the machine. Lets find out what the user flag is 
 
 ![](Assets/Images/Pasted%20image%2020221205143650.png)
 
-##### Answer: `7ce5c2109a40f958099283600a9ae807`
+##### Answer: <details> <summary>Show Answer</summary> `7ce5c2109a40f958099283600a9ae807` </details>
 
 ## Question 5: 
 #### What is the root flag?
@@ -211,7 +211,7 @@ We can now easily get the root flag and answer our final question!
 
 ![](Assets/Images/Pasted%20image%2020221205162135.png)
 
-##### Answer: `3f0372db24753accc7179a282cd6a949`
+##### Answer: <details> <summary>Show Answer</summary> `3f0372db24753accc7179a282cd6a949` </details>
 
 ## Conclusion
 
