@@ -11,7 +11,7 @@ Note: Although this room is a walkthrough, it expects familiarity with tools and
 
 md5sum of PCAP file: 11c3b2e9221865580295bc662c35c6dc
 ```
-![](Assets/Task_Files/overpass2.pcapng "Download Task File")
+![Download Task File](Assets/Task_Files/overpass2.pcapng "Download Task File")
 
 
 ## Question 1:
