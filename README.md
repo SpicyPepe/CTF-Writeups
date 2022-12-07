@@ -6,8 +6,8 @@
 
 ## CTF Write Ups
 
-### WriteUps from challenges during capture the flag security rooms & competitions.
-### Below is the list of challenges and links to the relevant rooms.
+### WriteUps from challenges during capture the flag rooms & competitions.
+### Below is the list of challenges and links to the relevant rooms. If you haven't already, I highly recommend checking out the [TryHackMe][2] platform as its an incredible source for learning all things Cyber Security.
 
 * [TryHackMe][2]
   * [HackPark][3]
