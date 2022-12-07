@@ -1,6 +1,6 @@
 #Writeups #Hydra 
 
-**TASK 1**
+# TASK 1
 
 Deploy the machine and access its web server.
   
@@ -11,7 +11,7 @@ Navigated to the IP address: 10.10.44.152
 ##### Answer: <details> <summary>Show Answer</summary> `Pennywise` </details>
 
 
-**Recon**
+## Recon
 
 Started Nmap scan "nmap -v -Pn -oN nmap1 10.10.44.152" to find open ports.
 Ran follow up scan using service detection scripts "nmap -sV -v -Pn -p 80,3389 -oN nmap2 10.10.44.152"
@@ -40,7 +40,7 @@ Googled "blog engine default login" to see if there are any easy default login's
 
 Attempted admin:admin however this failed.
 
-**TASK 2**
+# TASK 2
 
 ## Question 1: What request type is the Windows website login form using?
 
@@ -69,7 +69,7 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.44.152 http-post-form "
 
 ##### Answer: <details> <summary>Show Answer</summary> `1qaz2wsx` </details>
 
-**TASK 3**
+# TASK 3
 
 ## Question 1:  Now you have logged into the website, are you able to identify the version of the BlogEngine?
 
@@ -111,6 +111,8 @@ Navigate to: http://10.10.44.152/?theme=../../App_Data/files which activated the
 
 ##### Answer: <details> <summary>Show Answer</summary> `iis apppool\blog` </details>
 
+## Upgrading Our Shell
+
 Our netcat session is a little unstable, so lets generate another reverse shell using msfvenom.
 
 ![](Assets/Images/Pasted%20image%2020221201133004.png)
@@ -133,6 +135,7 @@ Ran 'Exploit -j' to run the job in the background. Moved over to the netcat shel
 
 ![](Assets/Images/Pasted%20image%2020221201135351.png)
 
+## Privilege Escalation
   
 You can run metasploit commands such as sysinfo to get detailed information about the Windows system. Then feed this information into the [windows-exploit-suggester](https://github.com/GDSSecurity/Windows-Exploit-Suggester) script and quickly identify any obvious vulnerabilities.
 
@@ -197,7 +200,7 @@ Repeated the above process except in the Administrator directory.
 
 ##### Answer: <details> <summary>Show Answer</summary> `7e13d97f05f7ceb9881a3eb3d78d3e72` </details>
 
-**TASK 5**
+# TASK 5
 
 ## Question 1: Using winPeas, what was the Original Install time? (This is date and time)
 
