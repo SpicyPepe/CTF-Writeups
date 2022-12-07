@@ -11,9 +11,7 @@ Note: Although this room is a walkthrough, it expects familiarity with tools and
 
 md5sum of PCAP file: 11c3b2e9221865580295bc662c35c6dc
 ```
-![Download Task File](Assets/Task_Files/overpass2.pcapng "Download Task File")
-
- <details> <summary>GeeksforGeeks</summary> A Computer Science Portal for Geeks </details> 
+![](Assets/Task_Files/overpass2.pcapng "Download Task File")
 
 
 ## Question 1:
@@ -22,7 +20,7 @@ Opening the task file in Wireshark we can see on the 14th line a post request to
 
 ![](Assets/Images/Pasted%20image%2020221207110324.png)
 
-##### Answer: `/development/`
+##### Answer: <details> <summary>Show Answer</summary> `/development/` </details> 
 
 ## Question 2:
 #### What payload did the attacker use to gain access?
