@@ -24,7 +24,5 @@
 [5]: https://tryhackme.com/room/dailybugle
 [6]: https://tryhackme.com/room/overpass2hacked
 
-*thm
-^thm
-%thm
-$thm
+
+//thm
