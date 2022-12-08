@@ -1,5 +1,5 @@
 ![](Assets/Images/Pasted%20image%2020221207104937.png)
-1. [Definitions](#Question-4)
+
 # Disclaimer!
 ### All writeups posted in this repository contain answers to questions hidden behind spoiler tags.
 ##### To ensure the best learning experience, I highly recommend avoiding the answers. You do however still have the option to view them if you think it will of benefit in the long run i.e reverse engineering a solution from the answer to gain a better understanding etc...
@@ -77,7 +77,7 @@ The hardcoded salt for the backdoor was defined in line `108` in the same script
 
 ##### Answer: <details> <summary>Show Answer</summary> `1c362db832f3f864c8c2fe05f2002a05` </details>
 
-[1] ## Question 3:
+## Question 3:
 #### What was the hash that the attacker used? - go back to the PCAP for this!
 
 Found using the same stream as earlier.
