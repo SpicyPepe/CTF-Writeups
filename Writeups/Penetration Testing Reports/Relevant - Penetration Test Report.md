@@ -41,8 +41,7 @@ This report is a 'mock report' of the room named 'Relevant' on TryHackMe.com.
 Due to the fact that this is a learning platform, this report contains uncensored information of a non-production system for the purpose of simulating and showcasing a real pen-testing report.
 As this is my first ever report, the format and *some* of the wording which I have used has been inspired by a few examples I've found online and adapted to my own liking.
 
-[Reference 1]( file:///C:/Users/Christian/Downloads/penetration-test-report.pdf)
-
+[Reference 1](https://pentestreports.com/reports/)
 [Reference 2](https://library.mosse-institute.com/articles/2022/02/example-of-a-penetration-testing-report-executive-summary/example-of-a-penetration-testing-report-executive-summary.html#:~:text=A%20penetration%20test%20report%20executive,not%20to%20pursue%20further%20action.)
 
 
