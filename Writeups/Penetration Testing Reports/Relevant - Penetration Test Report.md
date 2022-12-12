@@ -65,8 +65,8 @@ As this is my first ever report, the format and *some* of the wording which I ha
 1. [Some Definitions](#Some-Definitions)
 2. [Information Gathering](#Information-Gathering)
 3. [Vulnerability Scan](#Vulnerability-Scan)
-4. [General Overview](#General-Overview)
-5. [Recommended Actions](#Recommended-Actions)
+4. [Technical Write-up](#Technical-Write-up)
+5. [Conclusions and recommendations](#Conclusions-and-recommendations)
 
 
 ## Chapter 1 
