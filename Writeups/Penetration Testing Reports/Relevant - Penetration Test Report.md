@@ -100,8 +100,11 @@ This is a set of programs replacing the tools, that an administrator would gener
 There are many reasons why someone might want to penetrate your network and some of the more popular reasons have been outlined below:
 
 • **Information theft**: to steal valuable information of your business such as contracts, documents or e-mail communication. In other words, information that, for example, competitors may like to know or to hold the information/systems for ransom.
+
 • **Identity theft**: by using your network as relay to attack other networks, an attacker can mask his identity. 
+
 • **Political Espionage**: the act of obtaining, delivering, transmitting, communicating, or receiving information about a target with the intent to cause damage to reputation and gain a political advantage.
+
 • **Challenge to overcome**: to most attackers, your network represents a challenge that must be conquered or a way to prove their superior intelligence and technical skills.
 
 It's important to understand the psychology of an attacker. Whatever the attackers final motivation may be, it always remains a challenge to carry out a successful attack and often brings a high level of frustration along with it. 
