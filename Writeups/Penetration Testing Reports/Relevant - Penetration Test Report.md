@@ -83,10 +83,13 @@ Should the reader encounter any difficulties with understanding this penetration
 
 • **Hacker**: `a person who uses computers to gain unauthorized access to data.`
 This is word given by the mass media to define what we will more accurately call attacker or intruder in this report. 
+
 • **Vulnerability**: `the quality or state of being exposed to the possibility of being attacked`
 This is also known as a bug in computer program that may be abused to gain privileges on a computer. 
+
 • **Exploit**: `a software tool designed to take advantage of a flaw in a computer system, typically for malicious purposes such as installing malware.`
 An exploit can be a program or strategy to exploit a vulnerability. Depending on the vulnerability, an exploit may be either local, in which a previous “local” access to the target computer is required prior gain higher privileges, or remote where the exploit can be run without this prerequisite. 
+
 • **Rootkit**: `a set of software tools that enable an unauthorized user to gain control of a computer system without being detected`
 This is a set of programs replacing the tools, that an administrator would generally use to detect the presence of an intruder, by modified versions detecting everything but the presence and activities of the intruder, thus making the administrator confident that the system is free of any intrusions.
 
