@@ -14,6 +14,7 @@
   * [Skynet][4]
   * [Daily Bugle][5]
   * [Overpass 2 - Hacked][6]
+  * [Relevant - Pentesting Report][7]
 
 ### More to come...
 
@@ -23,3 +24,4 @@
 [4]: https://tryhackme.com/room/skynet
 [5]: https://tryhackme.com/room/dailybugle
 [6]: https://tryhackme.com/room/overpass2hacked
+[7]: https://tryhackme.com/room/relevant
