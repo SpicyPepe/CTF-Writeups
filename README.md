@@ -8,6 +8,7 @@
 
 ### WriteUps from challenges during capture the flag rooms & competitions.
 ### Below is the list of challenges and links to the relevant rooms. If you haven't already, I highly recommend checking out the [TryHackMe][2] platform as its an incredible source for learning all things Cyber Security.
+### See the below links to view the relevant rooms on TryHackMe.com.
 
 * [TryHackMe][2]
   * [HackPark][3]
